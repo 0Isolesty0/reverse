@@ -5,7 +5,7 @@ c語言程式
 gcc –E 123.c –o 123.i
 ```
 
-!(預處理)[https://github.com/0Isolesty0/image/blob/master/%E9%A0%90%E8%99%95%E7%90%86%E9%9A%8E%E6%AE%B5.PNG]
+![圖證](https://github.com/0Isolesty0/image/blob/master/%E9%A0%90%E8%99%95%E7%90%86%E9%9A%8E%E6%AE%B5.PNG)
 
 查看123.i
 ()[https://github.com/0Isolesty0/reverse/blob/master/123.i]
@@ -70,7 +70,7 @@ gcc -c 123.s -o 123.o
 ```
 連結階段
 
-!(編譯與組譯)[https://github.com/0Isolesty0/image/blob/master/%E7%B5%84%E8%AD%AF%EF%BC%8C%E9%80%A3%E7%B5%90.PNG]
+![圖證](https://github.com/0Isolesty0/image/blob/master/%E7%B5%84%E8%AD%AF%EF%BC%8C%E9%80%A3%E7%B5%90.PNG)
 
 ```
 gcc 123.o -o 123
