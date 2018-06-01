@@ -1,9 +1,64 @@
-c語言程式編譯與組譯
+c語言程式
+編譯與組譯
 ```
+預處理階段
+gcc –E 123.c –o 123.i
+```
+查看123.i
+()[https://github.com/0Isolesty0/reverse/blob/master/123.i]
+```
+編譯階段
 產生組語
-```
+gcc –S 123.i  –o 123.s
 產生AT&T語法格式的組語(gcc預設使用的格式)
+查看123.s的架構
+	.file	"123.c"
+	.section	.rodata
+.LC0:
+	.string	"%d\n"
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB2:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	$0, -8(%rbp)
+	movl	$9, -12(%rbp)
+	movl	$1, -4(%rbp)
+	jmp	.L2
+.L3:
+	movl	-4(%rbp), %eax
+	addl	$1, %eax
+	addl	%eax, %eax
+	movl	%eax, -8(%rbp)
+	movl	-8(%rbp), %eax
+	movl	%eax, -4(%rbp)
+	subl	$1, -12(%rbp)
+.L2:
+	cmpl	$0, -12(%rbp)
+	jg	.L3
+	movl	-8(%rbp), %eax
+	movl	%eax, %esi
+	movl	$.LC0, %edi
+	movl	$0, %eax
+	call	printf
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE2:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.5) 5.4.0 20160609"
+	.section	.note.GNU-stack,"",@progbits
 ```
+組譯階段
 gcc -S -masm=att XXXXX.c -o XXXXX_att.s
 產生Intel語法格式的組語(微軟預設使用的格式)
 ```
