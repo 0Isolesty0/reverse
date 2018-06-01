@@ -1,17 +1,20 @@
 c語言程式
 編譯與組譯
-```
 預處理階段
+```
 gcc –E 123.c –o 123.i
 ```
+(預處理)[https://github.com/0Isolesty0/image/blob/master/%E9%A0%90%E8%99%95%E7%90%86%E9%9A%8E%E6%AE%B5.PNG]
 查看123.i
 ()[https://github.com/0Isolesty0/reverse/blob/master/123.i]
-```
 編譯階段
 產生組語
+```
 gcc –S 123.i  –o 123.s
+```
 產生AT&T語法格式的組語(gcc預設使用的格式)
 查看123.s的架構
+```
 	.file	"123.c"
 	.section	.rodata
 .LC0:
@@ -59,6 +62,15 @@ main:
 	.section	.note.GNU-stack,"",@progbits
 ```
 組譯階段
+```
+gcc -c 123.s -o 123.o
+
+```
+連結階段
+(編譯與組譯)[https://github.com/0Isolesty0/image/blob/master/%E7%B5%84%E8%AD%AF%EF%BC%8C%E9%80%A3%E7%B5%90.PNG]
+```
+gcc 123.o -o 123
+```
 gcc -S -masm=att XXXXX.c -o XXXXX_att.s
 產生Intel語法格式的組語(微軟預設使用的格式)
 ```
