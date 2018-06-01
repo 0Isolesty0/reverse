@@ -7,8 +7,7 @@ gcc –E 123.c –o 123.i
 
 ![圖證](https://github.com/0Isolesty0/image/blob/master/%E9%A0%90%E8%99%95%E7%90%86%E9%9A%8E%E6%AE%B5.PNG)
 
-查看123.i
-()[https://github.com/0Isolesty0/reverse/blob/master/123.i]
+(查看123.i)[https://github.com/0Isolesty0/reverse/blob/master/123.i]
 編譯階段
 產生組語
 ```
@@ -79,8 +78,8 @@ main:
 gcc -c 123.s -o 123.o
 ```
 組譯過程
-查看123.o結構
-()[https://github.com/0Isolesty0/reverse/blob/master/123.o]
+
+(查看123.o結構)[https://github.com/0Isolesty0/reverse/blob/master/123.o]
 ```
 將組合語言程式碼轉成機器可以執行的指令(instructions)
 每一個組語語句都對應一機器指令。
